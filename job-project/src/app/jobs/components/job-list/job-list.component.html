@@ -1,0 +1,30 @@
+<div>
+
+    <div class="row">
+        <div class=col>
+
+        </div>
+
+        <div [style]="{'text-align': 'center'}" class=col>
+            <h3 [style]="{'text-align': 'center'}">Jobs</h3>
+        </div>
+
+        <div class="col">
+            <h3 [style]="{'text-align': 'right'}"><a *ngIf="hasPermissions"  id="back" routerLink="/main/jobs/edit"> <i
+                    class="fas fa-plus"> Add job </i></a></h3>
+
+        </div>
+    </div>
+
+
+        <div class="cards">
+            <app-job-item (deleteClicked)="onDelete($event)"
+                          (refresh)="refresh()"
+                          [adminControl]="true"
+                          *ngFor="let job of jobs"
+                          [job]="job"></app-job-item>
+        </div>
+
+
+
+</div>

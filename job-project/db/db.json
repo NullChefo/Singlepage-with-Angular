@@ -1,0 +1,200 @@
+{
+  "users": [
+    {
+      "name": "Google",
+      "email": "google@google.com",
+      "password": "123",
+      "role": "organization",
+      "id": 1
+    },
+    {
+      "name": "Microsoft",
+      "email": "microsoft@microsoft.com",
+      "password": "123",
+      "role": "organization",
+      "id": 2
+    },
+    {
+      "name": "Meta",
+      "email": "meta@meta.com",
+      "password": "123",
+      "role": "organization",
+      "id": 3
+    },
+    {
+      "name": "Rakesh",
+      "email": "rakesh@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "email": "mark@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "name": "pi",
+      "email": "",
+      "password": "",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "name": "Piter",
+      "email": "piter@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "name": "Ivan",
+      "email": "ivan@mail.bg",
+      "password": "123",
+      "role": "user",
+      "id": 8
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Junior Software Engineer",
+      "description": "• At least 1-2 years of experience in Java\n\n• Database modelling skills\n\n• Microservice experience (Spring Boot)\n\n• Build tools (Maven or Gradle)\n\n• CI / CD experience (nice to have)\n\n• Scrum workflow experience (nice to have)\n\n• You are fluent in English or German",
+      "kind": "full-time",
+      "department": "development",
+      "creatorId": 3,
+      "creatorName": "Meta",
+      "isActive": true,
+      "candidates": [
+        {
+          "userId": 4,
+          "name": "Rakesh",
+          "approved": false
+        },
+        {
+          "userId": 8,
+          "name": "Ivan",
+          "approved": true
+        },
+        {
+          "userId": 7,
+          "name": "Piter",
+          "approved": false
+        }
+      ],
+      "likes": [
+        {
+          "userId": 7
+        },
+        {
+          "userId": 4
+        },
+        {
+          "userId": 8
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Senior Software Engineer",
+      "description": "\n- 3+ experience in Java Development\n- Good knowledge with Spring and Spring Boot\n- Knowledge of other open source platforms like NodeJs is an advantage\n- Understanding the concepts of relational and non-relational database engines",
+      "kind": "remote",
+      "department": "development",
+      "creatorId": 3,
+      "creatorName": "Meta",
+      "isActive": false,
+      "candidates": [
+        {
+          "userId": 8,
+          "name": "Ivan",
+          "approved": false
+        },
+        {
+          "userId": 4,
+          "name": "Rakesh",
+          "approved": false
+        }
+      ],
+      "likes": [
+        {
+          "userId": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "IT Hardware Support",
+      "description": "QUALIFICATIONS\n\nBSc/BA in IT, Computer Science or relevant field\nMinimum 3 years of work experience in a similar position \nVery Good knowledge of English language\nExperience on SAP application support is considered a plus\nOther experience on ERP applications’ support is considered a plus",
+      "kind": "full-time",
+      "department": "other",
+      "creatorId": 3,
+      "creatorName": "Meta",
+      "isActive": true,
+      "candidates": [
+        {
+          "userId": 7,
+          "name": "Piter",
+          "approved": false
+        },
+        {
+          "userId": 4,
+          "name": "Rakesh",
+          "approved": false
+        }
+      ],
+      "likes": [
+        {
+          "userId": 7
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Desktop Support Technician",
+      "description": "Requirements:\n\n• Minimum 2 years of experience with helpdesk and application support\n• Minimum 1 year of experience in a Financial firm or equivalent fast-paced environment\n• Good problem solving. Excellent written, verbal communication and interpersonal skills\n",
+      "kind": "part-time",
+      "department": "office-administration",
+      "creatorId": 1,
+      "creatorName": "Google",
+      "isActive": true,
+      "candidates": [],
+      "likes": []
+    },
+    {
+      "id": 5,
+      "title": "Senior Backend Engineer",
+      "description": "- Experience as a backend software engineer in Rust, Golang, Java, or C++;\n- Experience in developing high throughput, scalable, robust, and easily maintainable systems;\n- Analytical and problem-solving thinking;\n- Willingness to constantly improve herself and to explore new technologies and practices;\n",
+      "kind": "full-time",
+      "department": "development",
+      "creatorId": 1,
+      "creatorName": "Google",
+      "isActive": true,
+      "candidates": [
+        {
+          "userId": 4,
+          "name": "Rakesh",
+          "approved": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Senior .NET Developer",
+      "description": "At least 5 years’ experience in .NET Framework\nDemonstrable C# programming abilities\nStrong knowledge in video streaming protocols\nExperience with MSSQL database (Entity Framework)\nWorking with source control\nGood self-learning skills\nExcellent interpersonal and communication skills",
+      "kind": "remote",
+      "department": "development",
+      "creatorId": 2,
+      "creatorName": "Microsoft",
+      "isActive": true,
+      "candidates": [
+        {
+          "userId": 4,
+          "name": "Rakesh",
+          "approved": false
+        }
+      ]
+    }
+  ]
+}

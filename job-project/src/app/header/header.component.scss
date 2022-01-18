@@ -1,0 +1,22 @@
+.nav-menu {
+
+  ul {
+    background-image: linear-gradient(to bottom right, #0099FF, #0D6EFD);
+    display: flex;
+
+    li {
+      list-style: none;
+      color: white;
+      font-size: 1.25rem;
+      padding: 15px;
+
+      &.stretched {
+        flex-grow: 1;
+      }
+
+      &.pointer {
+        cursor: pointer;
+      }
+    }
+  }
+}

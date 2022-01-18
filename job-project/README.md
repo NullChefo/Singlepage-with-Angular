@@ -1,0 +1,5 @@
+# FIRST "npm install"
+
+# THEN RUN "npm start" TO RUN THE WEB APPLICATION AND THE JSON SERVER
+
+

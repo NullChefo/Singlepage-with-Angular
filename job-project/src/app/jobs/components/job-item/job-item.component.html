@@ -1,0 +1,61 @@
+<div class="card card-1">
+    <div class="card__icon">
+        <h5 >{{job?.title}}</h5>
+
+     <p>By: {{job?.creatorName}}</p>
+
+    </div>
+    <p class="card__exit">  {{job?.department?.toUpperCase()}} - {{job?.kind?.toUpperCase()}} </p>
+
+    <p [style]="{'margin-top': '4px'}" class="card__title">{{job?.description}}</p>
+
+
+    <p class="card__apply">
+        <ng-container *ngIf="!isApplyAccepted">
+        <ng-container *ngIf="job?.isActive">
+        <ng-container *ngIf="!applied" >
+        <a [style]="{'cursor': 'pointer'}" (click)="applyForJob()" class="card__link" >Apply Now<i class="fas fa-arrow-right"></i></a> <!-- Applied -->
+        </ng-container>
+        <ng-container *ngIf="applied"  >
+            <a [style]="{'cursor': 'pointer'}" (click)="applyForJob()" class="card__link" >Application received<i class="fas fa-arrow-right"></i></a> <!-- Applied -->
+        </ng-container>
+        </ng-container>
+        <ng-container  *ngIf="!job?.isActive">
+            <ng-container >
+                <a [style]="{'cursor': 'pointer'}" class="card__link" >Job is unavailable <i class="fas fa-arrow-right"></i></a>
+            </ng-container>
+        </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="isApplyAccepted">
+            <a [style]="{'cursor': 'pointer'}" class="card__link" >You are accepted for this job!<i class="fas fa-arrow-right"></i></a>
+        </ng-container>
+
+    </p>
+
+    <div class="row">
+
+        <app-like [job]="job" class="col-sm"></app-like>
+
+        <div (click)="viewCandidates(job)" class="col-sm">
+            <i [style]="{'color': 'white', 'cursor': 'pointer'}" class="fas fa-eye card__link"> Applicants</i>
+        </div>
+
+
+        <ng-container *ngIf="hasPermissions && adminControl">
+            <div [style]="{ 'text-align': 'center'}" class="col-sm">
+                <a [routerLink]="['/main', 'jobs', 'edit', job?.id]"
+                   [style]="{'cursor': 'pointer', 'color': 'white', 'text-decoration': 'none'}"
+                   class="card__link">Edit</a>
+            </div>
+            <div (click)="onDelete()" [style]="{'cursor': 'pointer', 'color': 'white', 'text-align': 'center'}"
+                 class="col-sm"><a
+                    [style]="{'cursor': 'pointer', 'color': 'white', 'text-decoration': 'none'}"
+                    class="card__link">Delete</a>
+            </div>
+        </ng-container>
+
+
+    </div>
+
+</div>

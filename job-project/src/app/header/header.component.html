@@ -1,0 +1,39 @@
+<nav class="nav-menu">
+    <ul>
+        <li class="pointer"
+            routerLink="/home">Home
+        </li>
+
+
+        <li class="pointer"
+            routerLink="/main/jobs">Jobs
+        </li>
+
+
+        <li
+                *ngIf="hasUser"
+                class="pointer"
+                routerLink="/main/jobs/applications">My Applications
+        </li>
+
+
+        <li class="stretched"></li> <!-- Empty li -->
+
+
+        <li *ngIf="hasUser"
+            class="pointer"
+            routerLink="/auth/edit">Account Settings
+        </li>
+
+        <li (click)="onLogout()"
+            *ngIf="hasUser"
+            class="pointer">Logout
+        </li>
+        <li
+                *ngIf="!hasUser"
+                class="pointer">Login
+        </li>
+    </ul>
+
+
+</nav>

@@ -1,0 +1,13 @@
+<div>
+    <div class="row">
+        <h3 [style]="{'text-align': 'center'}">My Applications</h3>
+    </div>
+
+    <div class="cards">
+        <app-job-item (deleteClicked)="onDelete($event)"
+                      (refresh)="fetchJobs()"
+                      *ngFor="let job of jobs"
+                      [job]="job"></app-job-item>
+    </div>
+
+</div>

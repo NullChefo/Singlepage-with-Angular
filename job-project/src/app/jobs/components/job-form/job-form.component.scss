@@ -1,0 +1,30 @@
+.card {
+  align-self: center;
+}
+
+.forms {
+  margin-top: 3rem;
+  align-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 30%;
+}
+
+.row {
+  display: flex; /* equal height of the children */
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+  padding: 1em;
+}
+
+#back {
+  left: -1px;
+  cursor: pointer;
+
+  text-decoration: none;
+
+}

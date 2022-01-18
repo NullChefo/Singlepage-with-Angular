@@ -1,0 +1,80 @@
+<div class="forms">
+
+    <div class="row">
+        <div class="col mb-3">
+            <h3>User Settings</h3>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div
+                aria-labelledby="tab-login"
+                class="tab-pane fade show active"
+                id="pills-login"
+                role="tabpanel"
+        >
+            <form (ngSubmit)="onSubmit()" [formGroup]="formGroup">
+
+                <input
+                        formControlName="id"
+                        id="id"
+                        type="hidden"
+                />
+
+                <input
+                        formControlName="role"
+                        type="hidden"
+                />
+
+
+                <div class="form-outline mb-4">
+                    <p>Name:</p>
+                    <input
+                            class="form-control"
+                            formControlName="name"
+                            id="name"
+                            placeholder="John Smith"
+                            type="text"
+                    />
+                </div>
+                <div class="form-outline mb-4">
+                    <p>Email:</p>
+                    <input
+                            class="form-control"
+                            formControlName="email"
+                            id="email"
+                            placeholder="example@gmail.com"
+                            type="email"
+                    />
+                </div>
+                <div class="form-outline mb-4">
+                    <p>Password:</p>
+                    <input
+                            class="form-control"
+                            formControlName="password"
+                            id="loginPassword"
+                            placeholder="*********"
+                            type="password"
+                    />
+                </div>
+
+                <div class="text-center">
+                    <input
+                            class="btn btn-primary btn-block mb-4"
+                            type="submit"
+                            value="Update"
+                    />
+                    <input
+                            (click)="onDelete()"
+                            class="btn btn-primary btn-block mb-4"
+                            id="deleteBtn"
+                            value="Delete Account"
+                    />
+
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

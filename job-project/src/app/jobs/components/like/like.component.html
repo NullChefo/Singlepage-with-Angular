@@ -1,0 +1,9 @@
+<div >
+
+    <span  class="like-counter">
+        <div   *ngIf="isLiked"> <i (click)="onLike()" class="fas fa-heart like-button"> <span> {{ likeCount }} </span> </i></div>
+         <div  *ngIf="!isLiked"> <i (click)="onLike()"  class="far fa-heart like-button "> <span> {{ likeCount }} </span></i></div>
+    </span>
+
+
+</div>

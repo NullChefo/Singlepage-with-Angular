@@ -1,0 +1,86 @@
+
+
+
+
+<div class="forms">
+
+
+    <div class="row">
+    <div class=col>
+    <h3 >{{ formGroup?.get('id')?.value ? 'Edit job' : 'Add new job' }}</h3>
+
+    </div>
+        <div class="col">
+            <h3 [style]="{'text-align': 'right'}"><a id="back" routerLink="/main/jobs">Back to jobs</a> </h3>
+        </div>
+    </div>
+
+
+    <div class="tab-content">
+        <div
+                class="tab-pane fade show active"
+                id="pills-login"
+                role="tabpanel"
+                aria-labelledby="tab-login"
+        >
+            <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+                <input
+                        id="id"
+                        type="hidden"
+                        formControlName="id"
+                />
+
+                <div class="form-outline mb-4">
+                    <p>Title:</p>
+                    <input
+                            type="text"
+                            id="title"
+                            class="form-control"
+                            placeholder="Title"
+                            formControlName="title"
+                    />
+                </div>
+                <div class="form-outline mb-4">
+                    <p>Description:</p>
+                    <textarea
+                            id="description"
+                            class="form-control"
+                            placeholder="Description"
+                            formControlName="description"></textarea>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label for="department">Select Department:  &nbsp;</label>
+                    <select name="department" id="department" formControlName="department">
+                        <option value="office-administration">Office Administration</option>
+                        <option value="development">Development</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label for="kind">Select Kind:  &nbsp;</label>
+                    <select name="kind" id="kind" formControlName="kind">
+                        <option value="full-time">Full-Time</option>
+                        <option value="part-time">Part-Time</option>
+                        <option value="remote">Remote</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="text-center">
+                    <input
+                            type="submit"
+                            value="Submit"
+                            class="btn btn-primary btn-block mb-4"
+                    />
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

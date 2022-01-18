@@ -1,0 +1,16 @@
+
+<ng-container *ngFor="let c of job.candidates">
+
+<ng-container *ngIf="!isCreator">
+
+    <p>{{c.name}} <input type="checkbox" value="{{c.approved}}" disabled/></p>
+</ng-container>
+
+
+<ng-container *ngIf="isCreator">
+
+    <p>{{c.name}} <input type="checkbox" [checked]="isChecked(c)"   value="{{c.approved}}" (click)="checkTheBox(job, c)"/></p>
+
+</ng-container>
+
+</ng-container>
